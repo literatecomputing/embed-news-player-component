@@ -1,5 +1,3 @@
-example_setting:
-  default: true
 desktop_embed_code:
   default: "z01pvc2w"
 mobile_embed_code:

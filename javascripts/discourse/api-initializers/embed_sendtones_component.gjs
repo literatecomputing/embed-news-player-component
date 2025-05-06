@@ -1,13 +1,8 @@
-import { apiInitializer } from "discourse/lib/api";
-import { service } from "@ember/service";
-import SendToNewsPlayer from "../components/send-to-news-player";
 import { hbs } from "ember-cli-htmlbars";
-import { withPluginApi } from "discourse/lib/plugin-api";
+import { apiInitializer } from "discourse/lib/api";
 import { registerWidgetShim } from "discourse/widgets/render-glimmer";
 
 export default apiInitializer((api) => {
-  const desktop_embed_code = settings.desktop_embed_code;
-  const mobile_embed_code = settings.mobile_embed_code;
   // console.log("currentuser", this.currentUser);
   registerWidgetShim(
     "send-to-news-player",

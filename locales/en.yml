@@ -2,4 +2,6 @@ en:
   theme_metadata:
     description: add video after first post
     settings:
-      example_setting: A description of a setting.
+      exempt_groups: Comma separated list of groups that should not have the video added to their posts
+      desktop_embed_code: Embed code for desktop
+      mobile_embed_code: Embed code for mobile
