@@ -1,0 +1,8 @@
+{{log "thing args" this.args this.desktopEmbedCode}}
+<div
+  class="send-to-news-player"
+  data-stn-player="{{this.desktopEmbedCode}}"
+  {{did-insert this.setupPlayer}}
+>
+  <!-- Player will be initialized here -->
+</div>
