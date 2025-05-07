@@ -25,9 +25,16 @@ export default class SendToNewsPlayer extends Component {
     const exemptGroups = settings.exempt_groups
       .split(",")
       .map((group) => group.trim());
-    const userGroups = this.currentUser.groups.map((g) => g.name);
-    const isExempt = exemptGroups.some((group) => userGroups.includes(group));
+    // const userGroups = this.currentUser.groups.map((g) => g.name);
 
+    console.log('setup player', this.currentUser);
+
+    const isExempt =
+      this.currentUser &&
+      this.currentUser.groups &&
+      exemptGroups.some((group) =>
+        this.currentUser.groups.map((g) => g.name).includes(group)
+      );
     if (isExempt) {
       return;
     }

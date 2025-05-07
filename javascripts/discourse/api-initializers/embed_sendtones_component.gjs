@@ -17,7 +17,6 @@ export default apiInitializer((api) => {
       url.startsWith("/t/") && url.split("/").slice(4)[0]
         ? url.split("/").slice(4)[0]
         : 2;
-    console.log("decorate", helper, helper.widget.model.post_number);
     if (helper.widget.model.post_number === postNumber) {
       return helper.attach("send-to-news-player");
     }
