@@ -1,7 +1,7 @@
 import { hbs } from "ember-cli-htmlbars";
 import { apiInitializer } from "discourse/lib/api";
-import { registerWidgetShim } from "discourse/widgets/render-glimmer";
 import DiscourseURL from "discourse/lib/url";
+import { registerWidgetShim } from "discourse/widgets/render-glimmer";
 
 export default apiInitializer((api) => {
   registerWidgetShim(
@@ -16,7 +16,9 @@ export default apiInitializer((api) => {
       url.startsWith("/t/") && url.split("/").slice(4)[0]
         ? url.split("/").slice(4)[0]
         : 2;
-    if (parseInt(helper.widget.model.post_number) === parseInt(postNumber)) {
+    if (
+      parseInt(helper.widget.model.post_number, 10) === parseInt(postNumber, 10)
+    ) {
       return helper.attach("send-to-news-player");
     }
   });
