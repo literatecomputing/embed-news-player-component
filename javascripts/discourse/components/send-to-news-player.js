@@ -27,8 +27,6 @@ export default class SendToNewsPlayer extends Component {
       .map((group) => group.trim());
     // const userGroups = this.currentUser.groups.map((g) => g.name);
 
-    console.log('setup player', this.currentUser);
-
     const isExempt =
       this.currentUser &&
       this.currentUser.groups &&
